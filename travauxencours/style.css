@@ -1,5 +1,195 @@
+/* ----- GLOBAL ----- */
+:root {
+    --noir: #121111;
+    --orange: #F6562A;
+    --grispale: #F4F0F0;
+    --blanc: #FFFFFF;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif; /*temporaire !!!*/
+    
+}
+
+
+.section-center {
+    margin: 0 5%;
+}
+
+h2 {
+    font-size: 48px !important;
+    color: var(--orange) !important;
+    font-weight: bold !important;
+}
+
+h3 {
+    font-size: 24px !important;
+    color: var(--orange) !important;
+    font-weight: bold !important;
+}
+p {
+    font-size: 24px;
+    color: var(--blanc);
+}
+
+/* ----- BOUTONS ----- */
+.btn-fill {
+    width: 200px;
+    height: 100px;
+    padding: 1% 4%;
+    border-radius: 25px;
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* --------- INDEX --------- */
+
+/* ----- NAVBAR ----- */
+
+/* ----- SECTION HÉRO ----- */
 #accueil-hero {
-  background-color: var(--noir);
-  width: 100vw;
-  height: 100vh;
-}/*# sourceMappingURL=style.css.map */
+background-color: var(--noir);
+width: 100vw;
+height: 100vh;
+}
+
+/* ----- SECTION ROBOT ----- */
+#accueil-robot {
+     background-color: var(--noir);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.accueil-robot {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-left img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+
+
+/* ----- SECTION BANNIÈRE TAKTIK ----- */
+
+/* ----- SECTION MEMBRE ----- */
+
+#accueil-membre {
+    background-color: var(--grispale);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.membre-container {
+    background-color: var(--noir);
+    width: 400px;
+    height: 550px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+.membre-container img {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.membre-container-top {
+    position: relative;
+}
+
+.membre-icon {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: var(--orange);
+    z-index: 1000;
+    right: 0;
+    margin: 2% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.membre-container-bottom {
+    display: grid;
+    padding : 5% 5%;
+}
+
+
+.membre-container-bottom p{
+    font-size: 18px;
+}
+
+   .swiper {
+    width: 400px;
+    height: 530px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+
+
+/* ----- SECTION OBSTACLES/PROGRES ----- */
+#accueil-obstacle {
+    width: 100vw;
+    height: 100vh;
+}
+
+.accueil-obstacle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.obstacle{
+    background-color: var(--orange);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.obstacle-container, .progres-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.progres {
+    background-color: var(--noir);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* ----- SECTION BANNIERE TAPE ----- */
+
+/* ----- SECTION VIDÉO ----- */
+
+/* ----- SECTION FOOTER ----- */
