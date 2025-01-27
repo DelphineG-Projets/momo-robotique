@@ -73,11 +73,12 @@ p {
     height: 200vh;
     background-color: var(--noir);
     color: var(--blanc);
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .regles .titre {
@@ -87,6 +88,7 @@ p {
 .regles .nombre {
     font-size: 200px;
     text-align: justify;
+    align-self: center;
 }
 
 .regles p {
@@ -101,10 +103,10 @@ p {
     height: 15%;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: center;
-    border-bottom: var(--grispale) 1px solid;
     align-self: center;
+    border-bottom: 1px var(--grispale) solid;
 }
 
 
