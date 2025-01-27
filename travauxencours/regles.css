@@ -14,7 +14,7 @@ body {
 
 h1 {
     color: var(--blanc);
-    font-size: 150px;
+    font-size: 120px;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
 }
@@ -28,8 +28,19 @@ h2 {
 
 p {
     color: var(--blanc);
-    font-size: 32px;
+    font-size: 24px;
     font-family: "Roboto", sans-serif;
+}
+
+ul {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 18px;
+    }
 }
 
 /* -------------------------------------------------------------------------SECTION HEROS------------------------------------------------------------------------------------*/
@@ -38,19 +49,23 @@ p {
     width: 90%;
     height: 100vh;
     background-color: var(--noir);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 .hero h1 {
-    width: 50%;
+    width: 70%;
+    height: 35%;
+    margin: 0;
 
 }
 
 .hero p {
     width: 45%;
+    height: 65%;
     text-align: justify;
     align-self: flex-end;
 }
@@ -73,12 +88,12 @@ p {
     height: 200vh;
     background-color: var(--noir);
     color: var(--blanc);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .regles .titre {
@@ -133,60 +148,114 @@ p {
     background-color: var(--noir);
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
 
+.but .points {
+    width: 50%;
+    height: 100%;
+    background-color: var(--grispale);
+}
 
+.but .points .description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 
+    width: 100%;
+    height: 80%;
+}
 
+.but h2 {
+    grid-area: 1 / 1 / 2 / 2;
+    color: var(--noir);
+    margin-left: 3%;
+}
+
+.but .points .para-gene {
+    grid-area: 2 / 2 / 3 / 3;
+    color: var(--noir);
+    width: 95%;
+}
+
+.but .points ul {
+    grid-area: 3 / 2 / 4 / 3;
+    color: var(--noir);
+}
+
+.but .points .piece {
+    grid-area: 4 / 2 / 5 / 3;
+    color: var(--noir);
+    margin-left: 7%;
+}
+
+.but .points .zone {
+    grid-area: 5 / 2 / 6 / 3;
+    color: var(--noir);
+}
+
+.but .points img {
+    grid-area: 2 / 1 / 6 / 2;
+
+    align-self: center;
+    justify-self: flex-start;
+    width: 90%;
 }
 
 .but .objectif {
-    margin-top: 5%;
-    width: 70%;
+    width: 50%;
     height: 100%;
     background-color: var(--orange);
-
 
 }
 
 .but .objectif .contenu {
-
+    margin-block: 5% auto;
     height: 80%;
     width: 100%;
-    display: grid;
-    grid-template-columns: 0.6fr 0.4fr;
-    grid-template-rows: 0.8fr 0.2fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-items: stretch;
-    align-items: center;
+    
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.6fr 1fr 0.5fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        
 }
 
-.but  .objectif .contenu .description {
+.but .objectif .contenu .description {
     margin-left: 2%;
     grid-area: 1 / 1 / 2 / 2;
     width: 80%;
-    align-self: flex-start;
+    align-self: center;
+    justify-self: center;
 }
 
-.but .objectif .contenu .description  p {
+.but .objectif .contenu .description p {
     margin-top: 0;
 }
 
-.but .objectif .contenu .description  ul {
-
+.but .objectif .contenu .description ul {
+    grid-area: 2 / 1 / 3 / 2;
     color: var(--blanc);
-    font-size: 32px;
+    font-size: 24px;
     font-family: "Roboto", sans-serif;
 }
 
 .but .objectif .contenu h2 {
-    margin-left: 2%;
-    grid-area: 2 / 1 / 3 / 2;
+    margin-right: 5%;
+    grid-area: 3 / 2 / 4 / 3;
+   
+    justify-self: flex-end;
+    align-self: flex-end;
 }
 
 .but .objectif .contenu img {
     grid-area: 1 / 2 / 3 / 3;
     align-self: center;
-    justify-self: flex-end;
-    height: 100%;
+    justify-self: center;
+    width: 90%;
 }
