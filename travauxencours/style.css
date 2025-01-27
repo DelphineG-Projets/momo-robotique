@@ -49,9 +49,44 @@ p {
 /* ----- SECTION HÉRO ----- */
 #accueil-hero {
   background-color: var(--noir);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.accueil-hero-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 0 5%;
+}
+
+.accueil-hero-title span {
+  text-transform: uppercase;
+  font-size: 5vw !important;
+  color: var(--blanc) !important;
+  font-weight: bold !important;
+  z-index: 999;
+  
+}
+.accueil-hero-container {
+ width: 40vw;
+ height: 40vw;
+ background-color: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.accueil-hero-img {
+  object-fit: cover;
+  width: 100%;
+}
+
 
 /* ----- SECTION ROBOT ----- */
 #accueil-robot {
