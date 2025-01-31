@@ -65,12 +65,12 @@ ul {
         font-size: 55px;
     }
 
-    h1{
+    h1 {
         font-size: 65px;
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px){
+@media screen and (min-width: 375px) and (max-width: 768px) {
     p {
         font-size: 12px;
     }
@@ -83,12 +83,12 @@ ul {
         font-size: 35px;
     }
 
-    h1{
+    h1 {
         font-size: 40px;
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px){
+@media screen and (max-width: 375px) {
     p {
         font-size: 10px;
     }
@@ -101,7 +101,7 @@ ul {
         font-size: 30px;
     }
 
-    h1{
+    h1 {
         font-size: 40px;
     }
 }
@@ -298,71 +298,213 @@ ul {
     grid-area: 2 / 2 / 3 / 3;
 }
 
+@media screen  and (max-width: 768px) {
+    .but {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .but .points {
+        width: 100%;
+    }
+
+    .but .objectif {
+        width: 100%;
+    }
+
+}
 
 
-    /* ------------------------------------------------------------------------SECTION but POINTS------------------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------SECTION but POINTS------------------------------------------------------------------------------------*/
+.but .points .contenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 0.7fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.but .points .contenu h2 {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: flex-start;
+    align-self: flex-end;
+    margin-left: 5%;
+    margin: 0 5%;
+}
+
+.but .points .contenu .description {
+    grid-area: 3 / 1 / 4 / 2;
+    justify-self: flex-start;
+    margin-left: 2%;
+}
+
+
+.but .points .contenu .image {
+    width: 90%;
+    grid-area: 2 / 1 / 3 / 2;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .but .points .contenu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.3fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+    }
+
+    .but .points .contenu h2 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .but .points .contenu .image {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .but .points .contenu .description {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+@media screen and (max-width: 375px) {
     .but .points .contenu {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 1fr 0.7fr;
+        grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
 
     .but .points .contenu h2 {
         grid-area: 1 / 1 / 2 / 2;
-        justify-self: flex-start;
-        align-self: flex-end;
-        margin-left: 5%;
-        margin: 0 5%;
+    }
+
+    .but .points .contenu .image {
+        grid-area: 2 / 1 / 3 / 2;
     }
 
     .but .points .contenu .description {
         grid-area: 3 / 1 / 4 / 2;
-        justify-self: flex-start;
-        margin-left: 2%;
+    }
+}
+
+/* ------------------------------------------------------------------------SECTION but OBJECTIF------------------------------------------------------------------------------------*/
+.but .objectif .contenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 0.7fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.but .objectif .contenu h2 {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-right: 5%;
+    margin: 0 5%;
+}
+
+.but .objectif .contenu .description {
+    grid-area: 3 / 1 / 4 / 2;
+    justify-self: flex-end;
+    margin-right: 2%;
+    width: 88%;
+}
+
+
+.but .objectif .contenu .image {
+    width: 90%;
+    grid-area: 2 / 1 / 3 / 2;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+/*
+    @media screen and (max-width: 768px) {
+        p {
+            font-size: 18px;
+        }
+    
+        ul {
+            font-size: 18px;
+        }
+    
+        h2 {
+            font-size: 55px;
+        }
+    
+        h1{
+            font-size: 65px;
+        }
+    }
+    
+    @media screen and (min-width: 375px) and (max-width: 768px){
+        p {
+            font-size: 12px;
+        }
+    
+        ul {
+            font-size: 12px;
+        }
+    
+        h2 {
+            font-size: 35px;
+        }
+    
+        h1{
+            font-size: 40px;
+        }
+    }
+    */
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .but .objectif .contenu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.3fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
     }
 
+    .but .objectif .contenu h2 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 
-    .but .points .contenu .image {
-        width: 90%;
+    .but .objectif .contenu .description {
         grid-area: 2 / 1 / 3 / 2;
-        justify-self: flex-start;
-        align-self: center;
     }
 
-    /* ------------------------------------------------------------------------SECTION but OBJECTIF------------------------------------------------------------------------------------*/
+    .but .objectif .contenu .image {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+@media screen and (max-width: 375px) {
     .but .objectif .contenu {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 1fr 0.7fr;
+        grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
 
     .but .objectif .contenu h2 {
         grid-area: 1 / 1 / 2 / 2;
-        justify-self: flex-end;
-        align-self: flex-end;
-        margin-right: 5%;
-        margin: 0 5%;
+    }
+
+    .but .objectif .contenu .image {
+        grid-area: 2 / 1 / 3 / 2;
     }
 
     .but .objectif .contenu .description {
         grid-area: 3 / 1 / 4 / 2;
-        justify-self: flex-end;
-        margin-right: 2%;
-        width: 88%;
     }
-
-
-    .but .objectif .contenu .image {
-        width: 90%;
-        grid-area: 2 / 1 / 3 / 2;
-        justify-self: flex-end;
-        align-self: center;
-    }
-
 }
 
 /* ------------------------------------------------------------------------SECTION TOURNOIS------------------------------------------------------------------------------------*/
