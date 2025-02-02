@@ -14,6 +14,14 @@
   margin: 0 5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
 h2 {
   font-size: 48px !important;
   color: var(--orange) !important;
@@ -45,6 +53,166 @@ p {
 /* --------- INDEX --------- */
 
 /* ----- NAVBAR ----- */
+/* ----- CSS DE BASE PAR : https://codepen.io/munjewar/pen/jQrNWw ----- */
+
+
+.navigation {
+  height: 55px;
+ background-color: var(--noir);
+ font-family: Arial, Helvetica, sans-serif !important;
+ 
+}
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 55px;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: var(--orange);
+}
+.brand a,
+.brand a:visited {
+  color: var(--orange);
+  text-decoration: none;
+}
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 55px;
+  color: #fff;
+  background-color: var(--noir);
+  text-decoration: none;
+}
+nav ul li a {
+  background: transparent;
+  color: var(--blanc);
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background-color: var(--orange);
+  color: var(--blanc);
+}
+.navbar-dropdown li a {
+  background-color: var(--orange);
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " \025BE";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+.navbar-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background-color:  var(--blanc);
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.25);
+}
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  height: 55px;
+  width: 70px;
+}
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: 55px 0 0px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    background: #262626;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .navbar-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#navbar-toggle {
+  position: absolute;
+  left: 18px;
+  top: 15px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#navbar-toggle span,
+#navbar-toggle span:before,
+#navbar-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 30px;
+  background: var(--orange);
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#navbar-toggle span:before {
+  top: -10px;
+}
+#navbar-toggle span:after {
+  bottom: -10px;
+}
+#navbar-toggle.active span {
+  background-color: transparent;
+}
+#navbar-toggle.active span:before,
+#navbar-toggle.active span:after {
+  top: 0;
+}
+#navbar-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#navbar-toggle.active span:after {
+  transform: rotate(-45deg);
+}
 
 /* ----- SECTION HÉRO ----- */
 #accueil-hero {
@@ -71,22 +239,20 @@ p {
   color: var(--blanc) !important;
   font-weight: bold !important;
   z-index: 999;
-  
 }
 .accueil-hero-container {
- width: 40vw;
- height: 40vw;
- background-color: transparent;
- display: flex;
- justify-content: center;
- align-items: center;
+  width: 40vw;
+  height: 40vw;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accueil-hero-img {
   object-fit: cover;
   width: 100%;
 }
-
 
 /* ----- SECTION ROBOT ----- */
 #accueil-robot {
@@ -136,6 +302,11 @@ p {
   height: 375px;
   object-fit: cover;
   overflow: hidden;
+
+}
+
+.membre-container:hover img {
+  filter: grayscale(0);
 }
 
 .membre-container-top {
@@ -166,7 +337,7 @@ p {
 }
 
 .swiper {
-  width: 400px;
+  width: 100vw;
   height: 530px;
 }
 
@@ -178,6 +349,14 @@ p {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
+  max-width: 400px;
+  margin: 10px;
+}
+
+.swiper-wrapper .mySwiperMembre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ----- SECTION OBSTACLES/PROGRES ----- */
@@ -216,4 +395,25 @@ p {
 
 /* ----- SECTION VIDÉO ----- */
 
+#accueil-video {
+  background-color: var(--noir);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+}
+.accueil-video {
+
+  margin: 0 5%;
+  width: 100%;
+  height: 100%;
+  
+}
+.video-presentation {
+  position: absolute;
+  background-color: #262626;
+  width: 87vw;
+  height: 80vh;
+}
 /* ----- SECTION FOOTER ----- */
