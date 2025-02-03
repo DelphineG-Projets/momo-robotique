@@ -1,6 +1,24 @@
 /* SWIPER SECTION MEMBRE*/
 var swiper = new Swiper(".mySwiperMembre", {
-  slidesPerView: "auto",
+  slidesPerView: 1,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1700: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  },
+  centeredSlides: true,
   grabCursor: true,
   loop: true,
   spaceBetween: 30,
