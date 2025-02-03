@@ -29,7 +29,7 @@ h2 {
 
 p {
     color: var(--blanc);
-    font-size: 32px;
+    font-size: 24px;
     font-family: "Roboto", sans-serif;
 }
 
@@ -38,7 +38,7 @@ ul {
     font-family: "Roboto", sans-serif;
     color: var(--blanc);
 }
-
+/*
 @media screen and (max-width: 1800px) {
     p {
         font-size: 24px;
@@ -105,7 +105,7 @@ ul {
     h1 {
         font-size: 40px;
     }
-}
+}*/
 
 /* -------------------------------------------------------------------------SECTION HEROS------------------------------------------------------------------------------------*/
 .hero {
@@ -223,7 +223,7 @@ section.banniere-box .banniere-gauche {
     overflow: hidden;
 }
 
-section.banniere-box .banniere-droite h2 {
+section.banniere-box .banniere-droite h2{
     font-size: 180px;
     color: var(--grispale);
     white-space: nowrap;
@@ -269,7 +269,41 @@ section.banniere-box .banniere-gauche h2:nth-child(5n) {
     }
 }
 
+@media screen and (min-width: 1800px) and (max-width: 2700px) {
+    section.banniere-box .banniere-gauche h2,
+    section.banniere-box .banniere-droite h2 {
+        font-size: 140px;
+    }
 
+}
+
+@media screen and (max-width: 1800px) and (min-width: 768px) {
+    section.banniere-box .banniere-gauche h2,
+    section.banniere-box .banniere-droite h2 {
+        font-size: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.banniere-box .banniere-gauche h2,
+    section.banniere-box .banniere-droite h2 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    section.banniere-box .banniere-gauche h2,
+    section.banniere-box .banniere-droite h2 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    section.banniere-box .banniere-gauche h2,
+    section.banniere-box .banniere-droite h2 {
+        font-size: 50px;
+    }
+}
 /* ------------------------------------------------------------------------SECTION REGLES------------------------------------------------------------------------------------*/
 
 .regles {
